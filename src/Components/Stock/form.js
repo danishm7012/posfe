@@ -33,7 +33,6 @@ export default function Form() {
     const [supplierName, setSupplierName] = useState('')
     const [CName, setCName] = useState('');
     const [buyDate, setBuyDate] = useState(new Date())
-    const [productPerCarton, setProductPerCarton] = useState('')
     const [quantity, setQuantity] = useState('')
     const [buyPrice, setBuyPrice] = useState('')
     const [salePrice, setSalePrice] = useState('')
@@ -58,7 +57,6 @@ export default function Form() {
             setProductName(data.product_name)
             setSupplierName(data.supplier_name)
             setBuyDate(data.buy_date)
-            setProductPerCarton(data.product_per_carton)
             setQuantity(data.quantity)
             setBuyPrice(data.buy_price)
             setSalePrice(data.sale_price)
@@ -82,7 +80,6 @@ export default function Form() {
             product_name: prodcutName,
             supplier_name: supplierName,
             buy_date: buyDate,
-            product_per_carton: productPerCarton,
             quantity,
             buy_price: buyPrice,
             sale_price: salePrice,
@@ -106,7 +103,6 @@ export default function Form() {
             product_name: prodcutName,
             supplier_name: supplierName,
             buy_date: buyDate,
-            product_per_carton: productPerCarton,
             quantity,
             buy_price: buyPrice,
             sale_price: salePrice,
