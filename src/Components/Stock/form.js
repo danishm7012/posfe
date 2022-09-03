@@ -116,7 +116,7 @@ export default function Form() {
         if (res.status === 200) {
             alert("Saved successfully");
             // alert(JSON.stringify(res.data))
-            this.props.history.push("/stocklist");
+            history.push("/stocklist");
         } else {
             throw new Error(
                 `Unable to create the record. The status code is ${res.status}`
@@ -206,19 +206,19 @@ export default function Form() {
                 />
                 {/* </Grid> */}
                 {/* <Grid item xs={12} sm={6}> */}
-                <TextField
-                    required
-                    id="productpercarton"
-                    name="productpercarton"
-                    title="Product per carton"
-                    placeholder="Product per carton"
-                    fullWidth
-                    autoComplete="shipping address-line2"
-                    variant="filled"
-                    value={productPerCarton}
-                    style={{ height: 35, marginBottom: 10 }}
-                    onChange={(e) => setProductPerCarton(e.target.value)}
-                />
+//                 <TextField
+//                     required
+//                     id="productpercarton"
+//                     name="productpercarton"
+//                     title="Product per carton"
+//                     placeholder="Product per carton"
+//                     fullWidth
+//                     autoComplete="shipping address-line2"
+//                     variant="filled"
+//                     value={productPerCarton}
+//                     style={{ height: 35, marginBottom: 10 }}
+//                     onChange={(e) => setProductPerCarton(e.target.value)}
+//                 />
                 {/* </Grid> */}
 
                 {/* <Grid item xs={12} sm={6}> */}
