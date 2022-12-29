@@ -22,6 +22,9 @@ export default function CustomCountCard(props) {
                                     <CountUp
                                         end={props.count}
                                         duration={1}
+                                        separator=","
+                                        prefix="Rs "
+  
                                     />
                                     {/* {props.count} */}
                                 </p>

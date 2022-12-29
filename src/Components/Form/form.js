@@ -162,7 +162,7 @@ export default function Form() {
         }
         const res = await api.post(`supplier/add`, {
             supplier_name: firstName,
-            supplier_email: email,
+            supplier_email: null,
             contact_no: contact,
             address,
             previous_balance: PBalance
@@ -243,7 +243,7 @@ export default function Form() {
                 />
 
 
-                <TextField
+                {/* <TextField
                     // required
                     id="email"
                     name="email"
@@ -253,7 +253,7 @@ export default function Form() {
                     title={`${title} Email`}
                     onChange={(e) => setEmail(e.target.value)}
                     style={{ height: 35, marginBottom: 10 }}
-                />
+                /> */}
                 <TextField
                     required
                     id="contact"
@@ -276,7 +276,7 @@ export default function Form() {
                     title={`${title} Address`}
                     placeholder={`${title} Address`}
                     type="textarea"
-                    style={{ marginBottom: 20 }}
+                    // style={{ marginBottom: 20 }}
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     style={{ height: 35, marginBottom: 50 }}
