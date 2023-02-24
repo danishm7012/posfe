@@ -106,7 +106,7 @@ export default function Form() {
         }
         const res = await api.post(`customer/add`, {
             customer_name: firstName,
-            customer_email: email,
+            customer_email: "user@pos.com",
             contact_no: contact,
             address,
             previous_balance: PBalance

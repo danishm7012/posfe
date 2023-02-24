@@ -17,7 +17,7 @@ export default function Home() {
         var res = await api.get('supplier/get_all')
         if (res.status == 200){
                 let data=res.data.data
-                let totalSupBalance=data.reduce((accumulator, object) => {
+                let totalSupBalance=data?.reduce((accumulator, object) => {
                     return accumulator + object.previous_balance;
                   }, 0)
 
@@ -29,7 +29,7 @@ export default function Home() {
         res = await api.get('customer/get_all')
         if (res.status == 200){
             let data=res.data.data
-                let totalCustomerBalance=data.reduce((accumulator, object) => {
+                let totalCustomerBalance=data?.reduce((accumulator, object) => {
                     return accumulator + object.previous_balance;
                   }, 0)
 
@@ -40,10 +40,11 @@ export default function Home() {
         res = null
         res = await api.get('stock/get_all')
         if (res.status == 200){
-
             let data=res.data.data
-                let totalProductAmount=data.reduce((accumulator, object) => {
-                    return accumulator + object.total_bill;
+            console.log(data)
+
+                let totalProductAmount=data?.reduce((accumulator, object) => {
+                    return accumulator + object.buy_price;
                   }, 0)
             setTotalStock(totalProductAmount)
 
